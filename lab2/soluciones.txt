@@ -1,0 +1,39 @@
+Nombre(s):
+
+* Creación de procesos mediante fork (Sección 1)
+1.- Adjuntar "ejercicio1-1.c". 
+
+
+* Zonas de datos entre procesos vinculados por fork (Sección 2)
+1.- No, son variables distintas, porque cada proceso tiene una zona de memoria diferente. Son procesos y no threads.
+2.- Adjuntar "ejercicio2-2.c".
+
+* Ficheros abiertos entre procesos vinculados por fork (Sección 3)
+1.-
+2.- Adjuntar "ejercicio3-2.c".
+3.- Adjuntar las soluciones como "ejercicio3-3-1.c", "ejercicio3-3-2.c", "ejercicio3-3-3.c"
+y responder a las preguntas. 
+
+* Espera del proceso padre al proceso hijo (Sección 4)
+1.- Contestar aquí.
+2.- Adjuntar "ejercicio4-2.c" y responder a las preguntas.
+3.- Adjuntar "ejercicio4-3.c" y responder a las preguntas.
+
+* Inicio de programas mediante exec (Sección 5)
+1.- Adjuntar "ejercicio5-1.c".
+
+* Manejo de señales (Sección 6)
+1.- Adjuntar "ejercicio6-1.c" e indicar el comando 
+usado para mandar la señal.
+
+* Envío de señales entre procesos (Sección 7).
+1.- Adjuntar "ejercicio7-1.c" e indicar el comando usado
+para mandar la señal.
+
+
+* Comunicación mediante tuberías (pipes) (Sección 8)
+1.- Adjuntar "ejercicio8-1.c".
+
+
+* Ejercicio final (Voluntario)
+1.- Adjuntar "ejercicio_final.c".
