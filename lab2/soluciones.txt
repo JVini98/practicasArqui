@@ -9,7 +9,10 @@ Nombre(s):
 2.- Adjuntar "ejercicio2-2.c".
 
 * Ficheros abiertos entre procesos vinculados por fork (Sección 3)
-1.-
+1.- La constante es una descripción en código de los permisos concedidos al descriptor del archivo. El 0666 es un codigo en octal que nos indica que permisos tienen los usuarios con respecto a ese archivo. El 0666 equivale al '110110110' que si lo traducimos a los permisos es: 'rw-rw-rw-' por tanto todo el mundo tiene permiso de lectura y escritura pero no de ejecución.
+
+ Si nos fijamos en los permisos que tienen los ficheros, en realidad son 'rw-r--r--' esto es debido a que existe una umask preestablecida que enmascara los procesos y solo nos permite añadir los que ella conoce. Si ejecutamos umask -S: u=rwx,g=rx,o=rx esto significa que como mucho podemos asignar estos permisos y por tanto no podemos asignar persmisos de escritura ni a grupo ni a otros. Aunque usemos el codigo 0666.
+
 2.- Adjuntar "ejercicio3-2.c".
 3.- Adjuntar las soluciones como "ejercicio3-3-1.c", "ejercicio3-3-2.c", "ejercicio3-3-3.c"
 y responder a las preguntas. 
