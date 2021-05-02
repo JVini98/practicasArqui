@@ -14,8 +14,8 @@ Nombre(s):
  Si nos fijamos en los permisos que tienen los ficheros, en realidad son 'rw-r--r--' esto es debido a que existe una umask preestablecida que enmascara los procesos y solo nos permite añadir los que ella conoce. Si ejecutamos umask -S: u=rwx,g=rx,o=rx esto significa que como mucho podemos asignar estos permisos y por tanto no podemos asignar persmisos de escritura ni a grupo ni a otros. Aunque usemos el codigo 0666.
 
 2.- Adjuntar "ejercicio3-2.c".
-3.- Adjuntar las soluciones como "ejercicio3-3-1.c", "ejercicio3-3-2.c", "ejercicio3-3-3.c"
-y responder a las preguntas. 
+
+3.- Cuando eliminamos el \n en el primer caso y no hacemos nada mas la salida estandar no tiene ninguna instruccón que le obligue a liberar el buffer, como hace el \n o un flush de salida estandar. Los otros como usamos una funcion de escritura en fichero marcando la stadout como el fichero no influye, y en ultimo caso forzamos el flush con fflush. 
 
 * Espera del proceso padre al proceso hijo (Sección 4)
 1.- Contestar aquí.

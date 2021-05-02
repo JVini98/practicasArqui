@@ -4,7 +4,8 @@
 
 void show_message(char* message) {
     printf("<%s>", message);
-}
+    fflush(stdout);
+  }
 
 #include <unistd.h>
 #include <stdio.h>

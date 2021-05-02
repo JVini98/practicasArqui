@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// TODO Refactor a para generalizar la profundidad del arbol
+
 void show_message(char* message) {
     printf("<%s>\n", message);
 }

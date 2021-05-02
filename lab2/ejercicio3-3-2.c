@@ -1,14 +1,11 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void show_message(char* message) {
-    printf("<%s>", message);
+    write(1,message,sizeof(message));
 }
-
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     pid_t aa, ab, aaa, aab, aba, abb;
