@@ -2,10 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// TODO Refactor a para generalizar la profundidad del arbol
-
 void show_message(char* message) {
-    printf("<%s>\n", message);
+    printf("<%s>", message);
 }
 
 #include <unistd.h>
@@ -71,16 +69,6 @@ int main() {
                   printf("No he podido crear el proceso hijo \n");
                   break;
             }
-
-            /*switch (ab) {
-              case -1:
-                  printf("No he podido crear el proceso hijo \n");
-                  break;
-              default:
-                  show_message("ABB");
-                  abb = fork();*/
-            //sleep(30); //suspende el proceso 30 segundos. Acaba antes el hijo.
-    //printf("Final de ejecución de %d \n", getpid());
     exit(0);
   }
 }

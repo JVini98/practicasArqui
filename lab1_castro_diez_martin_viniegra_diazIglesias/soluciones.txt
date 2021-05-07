@@ -1,0 +1,43 @@
+Nombre alumnos: Pablo Castro, Aicha Diez, Pablo Martin, Marta Diaz, Jaime Viniegra
+
+Respuestas:
+
+1. 	
+	touch nombres.txt
+	grep 'CASTRO' alumnos.txt | cut -d',' -f 2 >> nombres.txt
+	grep 'DIEZ' alumnos.txt | cut -d',' -f 2 >> nombres.txt
+	grep 'MARTIN' alumnos.txt | cut -d',' -f 2 >> nombres.txt
+	grep 'VINIEGRA' alumnos.txt | cut -d',' -f 2 >> nombres.txt
+	grep 'DIAZ IGLESIAS' alumnos.txt | cut -d',' -f 2 >> nombres.txt
+	cat nombres.txt
+
+2.
+	sort -R alumnos.txt | head -1
+3.
+	alias sorteo="sort -R ~/Desktop/practica1_Arqui/materiales/alumnos.txt | head -1"
+4.
+	find / -mtime -20
+	# Aparecen los errores porque no tenemos permisos para acceder a determinados directorios
+        	find / -mtime -20 2>/dev/null
+
+5.
+	sort -rk2 scores.txt > sorted_scored.txt 
+6.
+	grep -ir 'papito\|gasolina\|perreo' .
+	vim misticismo.txt 
+	vim callas.txt 
+	vim ondas.txt 
+7.
+	mkdir new_experiments
+	mkdir new_experiments/control
+	mkdir new_experiments/experimental
+
+	find . | grep "\-exper$" | while read f; do mv "$f" ./new_experiments/experimental/; done
+	find . | grep "\-control$" | while read f; do mv "$f" ./new_experiments/control/; done
+
+8.
+	grep -Eor '([ACTG]{4})\1' .
+
+9.- Adjuntar fichero meme_generator.sh
+10.- Adjuntar fichero processing_flights.sh
+11.- Adjuntar fichero convert_images.sh

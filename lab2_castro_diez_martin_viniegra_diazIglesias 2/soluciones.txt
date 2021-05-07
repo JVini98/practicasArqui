@@ -1,0 +1,42 @@
+Nombre(s): Pablo Castro, Aicha Diez, Pablo Martin, Marta Diaz, Jaime Viniegra
+
+* Creación de procesos mediante fork (Sección 1)
+1.- Adjuntar "ejercicio1-1.c". 
+
+
+* Zonas de datos entre procesos vinculados por fork (Sección 2)
+1.- No, son variables distintas, porque cada proceso tiene una zona de memoria diferente. Son procesos y no threads.
+2.- Adjuntar "ejercicio2-2.c".
+
+* Ficheros abiertos entre procesos vinculados por fork (Sección 3)
+1.- La constante es una descripción en código de los permisos concedidos al descriptor del archivo. El 0666 es un codigo en octal que nos indica que permisos tienen los usuarios con respecto a ese archivo. El 0666 equivale al '110110110' que si lo traducimos a los permisos es: 'rw-rw-rw-' por tanto todo el mundo tiene permiso de lectura y escritura pero no de ejecución.
+
+ Si nos fijamos en los permisos que tienen los ficheros, en realidad son 'rw-r--r--' esto es debido a que existe una umask preestablecida que enmascara los procesos y solo nos permite añadir los que ella conoce. Si ejecutamos umask -S: u=rwx,g=rx,o=rx esto significa que como mucho podemos asignar estos permisos y por tanto no podemos asignar persmisos de escritura ni a grupo ni a otros. Aunque usemos el codigo 0666.
+
+2.- Adjuntar "ejercicio3-2.c".
+
+3.- Cuando eliminamos el \n en el primer caso y no hacemos nada mas la salida estandar no tiene ninguna instruccón que le obligue a liberar el buffer, como hace el \n o un flush de salida estandar. Los otros como usamos una funcion de escritura en fichero marcando la stadout como el fichero no influye, y en ultimo caso forzamos el flush con fflush. 
+
+* Espera del proceso padre al proceso hijo (Sección 4)
+1.- El PPID del hijo es 1762, cuando el PID del padre es 14164. Al finalizar el proceso del padre antes que el hijo, uno pensaría que el hijo se quedaría huérfano y en cierto modo, lo hace. El hijo no puede tener un PPID de un proceso que no existe, de modo que la propia shell "adopta" el proceso hijo, de modo que el PPID ahora sea el PID de la shell.
+2.- Adjuntar "ejercicio4-2.c". El estado "curioso" es el Z (zombie) que se produce cuando el proceso hijo se muere, pero todavía es requerido su PID por el proceso padre, de modo que el hijo tiene que permanecer en la tabla de procesos para que el padre coja el PID del hijo. Este tiempo en el que espera en la tabla pero ya ha "muerto" es el estado zombie.
+3.- Adjuntar "ejercicio4-3.c". El proceso zombie ya no existe, hemos hecho un buen trabajo de exterminación de no muertos. Esto se debe a que la función wait espera a la muerte del hijo y libera los recursos correspondientes al hijo, de tal modo que deja de estar el estado zombie, y finalmente es enterrado como debía ser desde un principio.
+
+* Inicio de programas mediante exec (Sección 5)
+1.- Adjuntar "ejercicio5-1.c".
+
+* Manejo de señales (Sección 6)
+1.- Adjuntar "ejercicio6-1.c". El comando utilizado para mandar la señal es: kill pid.
+El comando kill utiliza por defecto la señal SIGTERM pero se podría usar del mismo modo: kill -SIGTERM pid.
+
+* Envío de señales entre procesos (Sección 7).
+1.- Adjuntar "ejercicio7-1.c" e indicar el comando usado
+para mandar la señal.
+
+
+* Comunicación mediante tuberías (pipes) (Sección 8)
+1.- Adjuntar "ejercicio8-1.c".
+
+
+* Ejercicio final (Voluntario)
+1.- Adjuntar "ejercicio_final.c".

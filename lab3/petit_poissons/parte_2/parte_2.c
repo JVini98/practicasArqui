@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #define BUFFER_SIZE 5
 #define NUM_CLIENTS 20
@@ -36,7 +38,6 @@ void *peluquero(void *args){
 
 		printf("I am Barber Patrick and I am done\n");
 		printf("I am costumer %ld... Exiting the barbershop\n", id);
-
 
 	}
 

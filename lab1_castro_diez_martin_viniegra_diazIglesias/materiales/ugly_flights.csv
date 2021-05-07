@@ -1,0 +1,154 @@
+########### On-time data for all flights that departed NYC in 2013 ############
+carrier: Two letter carrier abbreviation. 
+origin,dest: Origin and destination. 
+distance: distance between airports, in miles
+time_hour: Scheduled date and hour of the flight
+airtime: Amount of time spent in the air, in seconds
+tailnum: Plane tail number
+##############################################################################
+
+x carrier origin dest distance time_hour tailnum air_time
+1 FL	LGA      CAK    397    "2013-11-03 20:00:00"				N955AT	3840
+2 UA	EWR   LAS         2227    "2013-09-05 07:00:00"				N38257		17160
+3 EV	EWR      CLT    529    "2013-06-03 19:00:00"				N11150	4860
+4 UA	EWR      IAH         1400    "2013-03-18 16:00:00"				N670UA			12840
+5 DL	JFK      ATL         760    "2013-08-03 06:00:00"				N706TW			6420
+6 ## This flight is very interesting!!!
+7 B6	JFK      SLC         1990    "2013-03-10 19:00:00"				N556JB			16080
+8 AA	EWR      DFW    1372    "2013-04-03 09:00:00"				N4XVAA		13080
+9 EV     LGA   GSO         461    "2013-10-13 14:00:00"				N710EV	4080
+10 EV     EWR      DSM    1017    "2013-07-01 19:00:00"				N14174	8640
+11 EV      EWR   BWI         169    "2013-08-24 21:00:00"				N12136			1920
+12 B6      LGA      FLL    1076    "2013-05-24 19:00:00"				N571JB	8700
+13 EV     LGA   BNA    764    "2013-03-27 08:00:00"				N614QX	6840
+14 B6     JFK   BUF         301    "2013-09-09 06:00:00"				N190JB			3300
+15 EV     EWR   PWM         284    "2013-06-11 08:00:00"				N14920	2700
+16 ## This flight is very interesting!!!
+17 MQ      LGA      CLT         544    "2013-02-21 06:00:00"				N525MQ		5040
+18 AA      JFK   BOS    187    "2013-03-13 16:00:00"				N3KBAA		2640
+19 ## This flight is very interesting!!!
+20 EV	EWR      CVG         569    "2013-09-27 20:00:00"				N16961			4740
+21 DL     JFK   PDX    2454    "2013-10-02 16:00:00"				N3766	19320
+22 YV      LGA   CLT         544    "2013-12-30 11:00:00"				N918FJ	5700
+23 ## This flight is very interesting!!!
+24 MQ	LGA      CMH         479    "2013-03-11 15:00:00"				N722MQ	4800
+25 ## This flight is very interesting!!!
+26 EV     EWR      RIC         277    "2013-08-06 20:00:00"				N27190	2760
+27 B6	JFK   BOS         187    "2013-03-09 22:00:00"				N605JB	2100
+28 B6   JFK   RDU    427    "2013-10-12 07:00:00"				N346JB	4020
+29 UA	EWR   CLE         404    "2013-09-15 14:00:00"				N78501		3600
+30 B6      JFK   BTV         266    "2013-08-29 15:00:00"				N317JB	2700
+31 VX     EWR      LAX         2454    "2013-09-24 09:00:00"				N843VA		19800
+32 B6     JFK      SJU         1598    "2013-04-09 08:00:00"				N779JB	11400
+33 B6      JFK      BUF    301    "2013-07-30 18:00:00"				N307JB	3360
+34 AA	JFK      MIA         1089    "2013-04-23 13:00:00"				N628AA			8940
+35 DL	JFK      DTW    509    "2013-07-04 07:00:00"				N366NB			4860
+36 ## This flight is very interesting!!!
+37 UA	LGA      DEN         1620    "2013-05-25 15:00:00"				N434UA	13620
+38 AA   LGA      ORD         733    "2013-12-01 16:00:00"				N539AA	6780
+39 DL	JFK      BOS         187    "2013-06-30 16:00:00"				N333NB		2460
+40 EV      EWR      ROC         246    "2013-06-01 11:00:00"				N16981			2400
+41 MQ	LGA   CLE    419    "2013-01-22 11:00:00"				N722MQ	4680
+42 B6     JFK   IAD         228    "2013-10-20 18:00:00"				N190JB	3000
+43 ## This flight is very interesting!!!
+44 AA      LGA   ORD         733    "2013-07-09 08:00:00"				N483AA	6420
+45 ## This flight is very interesting!!!
+46 EV      EWR      DSM         1017    "2013-01-22 19:00:00"				N13202	9900
+47 UA      EWR      LAS    2227    "2013-08-02 06:00:00"				N529UA		18000
+48 ## This flight is very interesting!!!
+49 DL   LGA      FLL    1076    "2013-07-26 07:00:00"				N969DL			8160
+50 YV      LGA      IAD         229    "2013-01-11 16:00:00"				N521LR	2820
+51 ## This flight is very interesting!!!
+52 B6	JFK      RSW    1074    "2013-06-05 12:00:00"				N589JB	10020
+53 UA     EWR      SFO         2565    "2013-10-06 09:00:00"				N76516		19920
+54 ## This flight is very interesting!!!
+55 AA	LGA   ORD    733    "2013-06-14 21:00:00"				N4YCAA			6720
+56 EV      LGA   DTW         502    "2013-03-30 11:00:00"				N600QX	4500
+57 B6   JFK   MCO    944    "2013-12-25 12:00:00"				N746JB			8280
+58 ## This flight is very interesting!!!
+59 UA   EWR   BOS         200    "2013-09-06 13:00:00"				N17245	2460
+60 9E   JFK   BOS    187    "2013-02-26 11:00:00"				N912XJ		1920
+61 AA   LGA   MIA    1096    "2013-11-04 16:00:00"				N3GSAA			8700
+62 ## This flight is very interesting!!!
+63 AA   JFK   MCO         944    "2013-11-20 15:00:00"				N5FEAA	8040
+64 ## This flight is very interesting!!!
+65 MQ	LGA   CMH         479    "2013-06-06 18:00:00"				N8EGMQ		4440
+66 UA	LGA      ORD         733    "2013-04-12 15:00:00"				N830UA			6780
+67 ## This flight is very interesting!!!
+68 B6      JFK   SAN    2446    "2013-01-07 08:00:00"				N520JB			19200
+69 EV	LGA      PIT         335    "2013-04-17 16:00:00"				N612QX			3480
+70 DL	LGA   MSP    1020    "2013-05-26 08:00:00"				N339NW	8760
+71 EV   EWR      OMA    1134    "2013-10-24 10:00:00"				N17138		10020
+72 B6   JFK   JAX    828    "2013-11-14 21:00:00"				N316JB			6960
+73 ## This flight is very interesting!!!
+74 MQ     JFK   RDU    427    "2013-09-11 07:00:00"				N814MQ	3780
+75 DL      JFK      AUS    1521    "2013-09-16 16:00:00"				N3754A			11820
+76 MQ   LGA      CLT         544    "2013-01-22 06:00:00"				N544MQ	6360
+77 EV	LGA   CLT         544    "2013-10-22 12:00:00"				N754EV			5640
+78 B6     JFK      SJU         1598    "2013-03-18 06:00:00"				N508JB			11460
+79 B6   JFK   ROC    264    "2013-08-06 13:00:00"				N247JB			2820
+80 DL   JFK      FLL         1069    "2013-12-29 15:00:00"				N910DE	9720
+81 UA   EWR   DEN    1605    "2013-09-29 18:00:00"				N38443	12660
+82 EV	EWR   IAD    212    "2013-12-31 06:00:00"				N14543	2700
+83 B6     JFK   MCO    944    "2013-04-18 06:00:00"				N807JB		7620
+84 UA     EWR      EGE         1726    "2013-01-19 10:00:00"				N24715	15720
+85 B6     JFK   PHX         2153    "2013-01-31 18:00:00"				N556JB	18540
+86 MQ     JFK   CVG    589    "2013-10-27 15:00:00"				N617MQ	5760
+87 ## This flight is very interesting!!!
+88 UA   EWR   ORD         719    "2013-10-07 13:00:00"				N807UA		6420
+89 UA     LGA      ORD         733    "2013-12-08 07:00:00"				N430UA			7980
+90 DL	JFK   LAX         2475    "2013-09-10 18:00:00"				N192DN		19500
+91 9E     JFK   MSP    1029    "2013-05-31 16:00:00"				N926XJ	9660
+92 ## This flight is very interesting!!!
+93 UA	LGA      ORD    733    "2013-06-10 12:00:00"				N850UA			6480
+94 US   LGA   CLT         544    "2013-08-09 12:00:00"				N181UW		4920
+95 AA   JFK   MIA         1089    "2013-05-05 07:00:00"				N323AA	8880
+96 UA     EWR      BQN    1585    "2013-01-04 20:00:00"				N33292			11580
+97 ## This flight is very interesting!!!
+98 UA     EWR      SFO    2565    "2013-12-26 12:00:00"				N823UA		19860
+99 DL	LGA      DEN         1620    "2013-03-18 17:00:00"				N368NW		13980
+100 ## This flight is very interesting!!!
+101 DL	LGA      ATL    762    "2013-03-10 09:00:00"				N375NC		6540
+102 UA     EWR      SFO         2565    "2013-12-04 08:00:00"				N516UA		22140
+103 ## This flight is very interesting!!!
+104 UA     EWR      SAN    2425    "2013-12-06 14:00:00"				N38467	22380
+105 DL	JFK      SEA    2422    "2013-07-22 19:00:00"				N717TW	20580
+106 UA     LGA   IAH         1416    "2013-07-04 05:00:00"				N420UA			11160
+107 B6   JFK      SFO    2586    "2013-02-14 10:00:00"				N564JB	20940
+108 DL   LGA   TPA    1010    "2013-04-26 11:00:00"				N900DE	8280
+109 DL   JFK   LAX         2475    "2013-03-23 17:00:00"				N706TW			21120
+110 US   LGA      CLT         544    "2013-10-21 11:00:00"				N161UW		4980
+111 AA     JFK   SJU    1598    "2013-04-02 14:00:00"				N5FSAA	13200
+112 ## This flight is very interesting!!!
+113 B6     JFK      BQN    1576    "2013-05-20 23:00:00"				N634JB		11400
+114 ## This flight is very interesting!!!
+115 WN     EWR   MSY         1167    "2013-11-27 18:00:00"				N237WN			10380
+116 B6     EWR   FLL         1065    "2013-03-16 06:00:00"				N535JB	8760
+117 B6   JFK      MCO         944    "2013-09-09 20:00:00"				N547JB	7020
+118 EV     EWR   STL    872    "2013-07-15 20:00:00"				N14158	6780
+119 EV     EWR      CVG    569    "2013-06-17 08:00:00"				N11536	5880
+120 MQ	LGA      CMH         479    "2013-06-03 20:00:00"				N735MQ			4680
+121 EV      EWR   DAY    533    "2013-10-13 16:00:00"				N12126	4860
+122 MQ     JFK      ORF    290    "2013-07-04 17:00:00"				N643MQ			2880
+123 ## This flight is very interesting!!!
+124 VX	JFK   LAX    2475    "2013-06-16 13:00:00"				N629VA	20040
+125 B6      LGA      PBI         1035    "2013-03-24 07:00:00"				N563JB		9060
+126 UA      EWR      LAX         2454    "2013-04-07 06:00:00"				N76516			20700
+127 UA     EWR      LAX         2454    "2013-05-08 17:00:00"				N546UA	18480
+128 ## This flight is very interesting!!!
+129 EV     EWR   BNA    748    "2013-08-30 19:00:00"				N14902	6360
+130 MQ   EWR      ORD         719    "2013-09-20 13:00:00"				N6EAMQ		6060
+131 B6	JFK   ABQ    1826    "2013-08-05 20:00:00"				N527JB		14820
+132 WN     LGA      MDW    725    "2013-09-20 13:00:00"				N484WN			5880
+133 DL     LGA   MSP         1020    "2013-10-16 06:00:00"				N916DE		9300
+134 EV      EWR   ATL         746    "2013-02-24 13:00:00"				N753EV	6660
+135 ## This flight is very interesting!!!
+136 B6	JFK   ROC         264    "2013-07-01 22:00:00"				N266JB		2760
+137 ## This flight is very interesting!!!
+138 B6   JFK      BUF    301    "2013-02-10 22:00:00"				N807JB			3060
+139 ## This flight is very interesting!!!
+140 DL   LGA   MEM         963    "2013-04-27 13:00:00"				N919DL		8700
+141 EV      EWR      CVG         569    "2013-06-04 17:00:00"				N13903			5580
+142 DL     LGA      ATL    762    "2013-03-31 12:00:00"				N674DL			7200
+143 B6     LGA      TPA         1010    "2013-03-28 16:00:00"				N629JB		8280
+144 ## This flight is very interesting!!!
