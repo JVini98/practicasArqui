@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #define BUFFER_SIZE 5
 #define NUM_CLIENTS 20
