@@ -16,6 +16,8 @@ int contador_clientes = 0;
 
 sem_t *mutex, *clientes;
 
+
+
 void *peluquero(void *args){
 
 	long id;
@@ -38,7 +40,6 @@ void *peluquero(void *args){
 
 		printf("I am Barber Patrick and I am done\n");
 		printf("I am costumer %ld... Exiting the barbershop\n", id);
-
 
 	}
 
