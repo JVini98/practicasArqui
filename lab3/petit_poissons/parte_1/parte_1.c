@@ -23,12 +23,12 @@ void  *cliente(void *args){
 	
 
 	if(contador_clientes == 5){
-		printf("I am costumer %ld... Oooohhhh Noooo! The barbershop is full!", show);
+		printf("I am costumer %ld... Oooohhhh Noooo! The barbershop is full!\n", show);
 	}else{
 		contador_clientes++;
-		printf("I am costumer %ld... Resting at the couch", show);
+		printf("I am costumer %ld... Resting at the couch\n", show);
 	}
-	
+
 	return NULL;
 }
 
