@@ -1,0 +1,17 @@
+Nombre alumno(s):
+
+Respuestas:
+
+* Espacio de direcciones de un proceso
+1.-
+2.-
+3.-
+
+* Explorando el espacio de direcciones
+1.-
+2.- [voluntario] Adjuntar el programa (con makefile) "ejercicio2_2.c"
+3.- [voluntario] (1) Documentar el procedimiento; (2) adjuntar en el email
+una captura mostrando el comando usado y la salida del program y (3) Responder
+al punto 4 (3 casos distintos).
+
+

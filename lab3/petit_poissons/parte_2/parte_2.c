@@ -7,85 +7,66 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define BUFFER_SIZE 5
-#define NUM_CLIENTS 20
-#define SLEEP 300
+#define THREAD_NUM 2
 
-long sillones[BUFFER_SIZE];
-int contador_clientes = 0;
+sem_t *mutexBuffer;
 
-sem_t *mutex, *clientes;
+int buffer[5];
+int count = 0;
 
-void *peluquero(void *args){
-
-	long id;
-
+void* producer(void* args) {
 	while(1){
-		sem_wait(clientes);
+		int x = rand() % 5;
 
-		sem_wait(mutex);
-		id = sillones[0];
-		printf("I am costumer %ld... Moving from the Coach to the free chair\n", id);
-		for(int i = 1; i<BUFFER_SIZE ; i++){
-			sillones[i-1] = sillones[i] ;
+		sem_wait(mutexBuffer);
+
+		if(count < 5) {
+			buffer[count] = x;
+			count++;
 		}
-		contador_clientes--;
-		sem_post(mutex);
 
-		printf("Shz! Shz! I am Barber Patrick and I am cutting hair! Shz! Shz!\n\n");
-		printf("I am costumer %ld... Enjoying a nice haircut\n", id);
-		sleep(3);
-
-		printf("I am Barber Patrick and I am done\n");
-		printf("I am costumer %ld... Exiting the barbershop\n", id);
-
+		sem_post(mutexBuffer);
 	}
-
-	return NULL;
 }
 
-void  *cliente(void *args){
-
-	long id = (long) args;
-	
-	sem_wait(mutex);
-	
-	if(contador_clientes == 5){
-		printf("I am costumer %ld... Oooohhhh Noooo! The barbershop is full!\n", id);
-	}else{
-		
-			printf("I am costumer %ld... Resting at the couch\n", id);
-			sillones[contador_clientes] = id;
-			contador_clientes++;
-			sem_post(clientes);
-		
+void* consumer(void* args) {
+	while(1){
+		sem_wait(mutexBuffer);
+		if(count > 0){
+			int y = buffer[count - 1];
+			count--;
+			printf("%d \n", y);
+		}
+		sem_post(mutexBuffer);
 	}
-
-	sem_post(mutex);
-	
-	return NULL;
 }
 
-int main(){
-	srandom(time(NULL));
+int main(int argc, char* argv[]) {
+	srand(time(NULL));
+	pthread_t th[THREAD_NUM];
 
-	pthread_t tclientes[NUM_CLIENTS], tpeluquero;
-	mutex = sem_open("/mutex", O_CREAT, 0644, 1);
-	clientes = sem_open("/clientes", O_CREAT, 0644, 0);
+	mutexBuffer = sem_open("/mutexBuffer", O_CREAT, 0644, 1);
 
-	pthread_create(&tpeluquero, NULL, peluquero, NULL);
+	int i;
+	for (int i = 0; i < THREAD_NUM; ++i){
+		if (i % 2 == 0){
+			if (pthread_create(&th[i], NULL, &producer, NULL) != 0){
+				perror("Failed to create thread");
+			}
+		} else {
+			if (pthread_create(&th[i], NULL, &consumer, NULL) != 0){
+				perror("Failed to create thread");
+			}
+		}
+	}
 
-	for(long i = 0; i<NUM_CLIENTS; i++){
-		pthread_create(&tclientes[i], NULL, cliente,(void*) i);
-		sleep((random() % 3));
-	} 
+	for (i = 0; i < THREAD_NUM; i++){
+		if (pthread_join(th[i],NULL) != 0) {
+			perror("Failed to join thread");
+		}
+	}
 
+	sem_close(mutexBuffer);
 
-	for (int i = 0; i < NUM_CLIENTS; i++) {
-    	pthread_join(tclientes[i], NULL);
-  	}
-  	pthread_join(tpeluquero, NULL);
-	sem_close(mutex);
-	sem_close(clientes);
-	exit(0);
+	return 0;
 }
